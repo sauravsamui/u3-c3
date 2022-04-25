@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies</title>
+    <style>
+      *{
+        font-family:sans-serif;
+      }
+      #movies{
+        width: 80%;
+        margin: auto;
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 30px 20px;
+      }
+      #movies>div{
+        width: 280px;
+        line-height: 24px;
+        padding: 10px;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      #movies>div>img{
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      #wallet{
+        text-align: right;
+      }
+      #search_bar{
+       width: 30%;
+       padding: 20px;
+       margin: auto;   
+       box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; 
+       display: flex;
+       justify-content: center;
+      }
+      #search{
+        width:300px;
+        height: 35px;
+        border-radius: 5px;
+        padding-left: 5px;
+       
+      }
+.book_now{
+  padding: 10px 20px;
+        color: antiquewhite;
+        background-color: teal;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        margin-left: 5px;
+}
+.book_now:hover{
+  background-color: aqua;
+}
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <h1>Movie List</h1>
+      <h1 id="wallet"></h1>
+      <!-- Display the wallet amount here inside h1 tag with id as "wallet". Note only amount, no extra text. Like 500 not Rs 500 -->
+    </div>
+    <div id="search_bar">
+      <!-- input box for searching movies with id as "search" -->
+      <!-- No button should be there for searching movies, it should search with input  -->
+      <input id="search" oninput="debounce(main,500)" type="text" placeholder="Search"/>
+    </div>
+
+    <div id="movies">
+      <!-- Append all searched movies here in grid format -->
+      <!-- Every movie card should have image, title and a book now button  -->
+      <!-- Book now buttons should have class "book_now"  -->
+    </div>
+  </body>
+</html>
+<script src="/scripts/movies.js"></script>
